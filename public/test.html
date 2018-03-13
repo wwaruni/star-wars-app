@@ -1,0 +1,32 @@
+import React, {Component} from 'react';
+import './Person.css';
+
+const person = (props) => (
+<div className="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div className="mdl-card__title">
+        <h2 className="mdl-card__title-text">{props.name}</h2>
+    </div>
+    <div className="mdl-card__supporting-text custom-text">
+        {props.display_more_details ?
+
+        <ul className='mdl-list'>
+            <li className="mdl-list__item">Height: {props.height}</li>
+            <li className="mdl-list__item">Hair color: {props.hair_color}</li>
+            <li className="mdl-list__item">Birth year: {props.birth_year}</li>
+            <li className="mdl-list__item">Home world: {props.homeworld}</li>
+            <li className="mdl-list__item">Title of films: {props.homeworld}</li>
+        </ul>
+        :
+        null}
+    </div>
+
+    <div className="mdl-card__actions mdl-card--border">
+        <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onClick={props.show_more}>
+            {props.display_more_details ? <span> Hide More Details </span>: <span> Show More Details </span>}
+        </a>
+    </div>
+</div>
+
+);
+
+export default person;
