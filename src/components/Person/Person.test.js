@@ -37,4 +37,10 @@ describe('<Person />', () => {
         wrapper.setProps({display_more_details: true});
         expect(wrapper.find('.more-btn').text()).toMatch(/Hide More Details/);
     });
+
+    it('should display more details section when requested for more details', () => {
+        wrapper.setProps({display_more_details: true});
+        expect(wrapper.find('.more-details')).toHaveLength(1);
+    });
+
 });

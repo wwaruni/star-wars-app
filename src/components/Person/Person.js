@@ -9,7 +9,7 @@ const person = (props) => (
             </div>
             <div className="mdl-card__supporting-text custom-text">
                 {props.display_more_details ?
-                    <ul className='mdl-list'>
+                    <ul className='mdl-list more-details'>
                         <li className="mdl-list__item">Height: {props.height}</li>
                         <li className="mdl-list__item">Hair color: {props.hair_color}</li>
                         <li className="mdl-list__item">Birth year: {props.birth_year}</li>
