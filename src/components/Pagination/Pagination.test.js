@@ -8,9 +8,21 @@ configure({adapter: new Adapter()})
 
 describe('<Pagination />', () => {
 
-    it('Display previous button only when there are old data', () => {
+    it('Should not display any buttons by default', () => {
 
-        const wrapper = shallow(<Pagination />);
-        expect(wrapper.find(button)).toHaveLength(2);
+         const wrapper = shallow(<Pagination />);
+         expect(wrapper.find('button')).toHaveLength(0);
+    });
+
+    it('Display previous button only when show previous is set', () => {
+
+        const wrapper = shallow(<Pagination show_prev_btn/>);
+        expect(wrapper.find('.prev-btn')).toHaveLength(1);
+    });
+
+    it('Display next button only when show next is set', () => {
+
+        const wrapper = shallow(<Pagination show_next_btn/>);
+        expect(wrapper.find('.next-btn')).toHaveLength(1);
     });
 });
