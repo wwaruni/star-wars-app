@@ -8,21 +8,26 @@ configure({adapter: new Adapter()})
 
 describe('<Pagination />', () => {
 
+    let wrapper;
+
+    beforeEach(() => {
+        wrapper = shallow(<Pagination />);
+    });
+
     it('Should not display any buttons by default', () => {
 
-         const wrapper = shallow(<Pagination />);
          expect(wrapper.find('button')).toHaveLength(0);
     });
 
     it('Display previous button only when show previous is set', () => {
 
-        const wrapper = shallow(<Pagination show_prev_btn/>);
+        wrapper.setProps({show_prev_btn: true});
         expect(wrapper.find('.prev-btn')).toHaveLength(1);
     });
 
     it('Display next button only when show next is set', () => {
-
-        const wrapper = shallow(<Pagination show_next_btn/>);
+        
+        wrapper.setProps({show_next_btn: true});
         expect(wrapper.find('.next-btn')).toHaveLength(1);
     });
 });
