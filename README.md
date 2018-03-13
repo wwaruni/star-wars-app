@@ -14,5 +14,5 @@ Setup the application
 
 Run Tests
 =========
-*. Run npm test command to see the unit tests
+. Run npm test command to see the unit tests
     
