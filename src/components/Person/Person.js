@@ -5,7 +5,7 @@ const person = (props) => (
     <div className="mdl-cell mdl-cell--6-col">
         <div className="person-card mdl-card mdl-shadow--2d">
             <div className="mdl-card__title mdl-card--expand">
-                <h2 className="mdl-card__title-text">{props.name}</h2>
+                <h2 className="mdl-card__title-text person-name">{props.name}</h2>
             </div>
             <div className="mdl-card__supporting-text custom-text">
                 {props.display_more_details ?
@@ -20,7 +20,7 @@ const person = (props) => (
             </div>
 
             <div className="mdl-card__actions mdl-card--border">
-                <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onClick={props.show_more}>
+                <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect more-btn" onClick={props.show_more}>
                     {props.display_more_details ? <span> Hide More Details </span>: <span> Show More Details </span>}
                 </a>
             </div>
