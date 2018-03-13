@@ -28,6 +28,7 @@ class People extends Component {
 
     }
 
+    // Central place to handle API response data
     apiResponseHandler = (response) => {
 
         try {
@@ -92,6 +93,7 @@ class People extends Component {
         });
     }
 
+    // Get data based on next or previous button click
     paginationHandler = (type) => {
 
         var url  = '';
@@ -107,8 +109,6 @@ class People extends Component {
         }
 
         if (url !== '') {
-
-
             axios.get(url)
                 .then(response => {
 
